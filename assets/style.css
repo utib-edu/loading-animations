@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+body {
+	margin: 0;
+	background: whitesmoke;
+	-webkit-text-size-adjust: 100%;
+	font-feature-settings: "palt";
+}
+.container {
+	padding: 24px 0;
+	text-align: center;
+}
+svg {
+	fill: none;
+	stroke: dodgerblue;
+	stroke-width: 10;
+	stroke-linecap: round;
+	stroke-dasharray: 230 230;
+	animation: loader 1.4s infinite cubic-bezier(.4,0,.3,1), loading 1.2s infinite linear;
+	vertical-align: middle;
+}
+@keyframes loader {
+	from { stroke-dashoffset: 230; }
+	to { stroke-dashoffset: -230; }
+}
+@keyframes loading {
+	from { transform: none; }
+	to { transform: rotate(360deg); }
+}
